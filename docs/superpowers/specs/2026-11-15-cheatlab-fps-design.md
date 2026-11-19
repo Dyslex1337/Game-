@@ -96,6 +96,24 @@ Ziel: **Spaß + C++ lernen**, für komplette Anfänger.
 - Die Missionen bauen auf C++-Grundlagen auf (Variablen → Bedingungen → Schleifen → Funktionen → Structs → Zeiger → Klassen). Jede neue Idee wird direkt mit einem Cheat geübt. Beispiel: eine Schleife über alle Gegner, um das ESP zu bauen.
 - Texte gibt es auf DE und EN. Code und Kommentare im Code sind auf Englisch.
 
+## 8b. Fake-Desktop, Chat und Story (Rahmen des Spiels)
+
+**Das Spiel startet wie eine virtuelle Maschine:** Nach einer lustigen Boot-Sequenz landet man auf dem Desktop eines eigenen Fake-Betriebssystems, Arbeitstitel **„HaxOS“**. Es ist an Windows angelehnt, hat aber einen eigenen Look und eigene Logos. Alles im Spiel ist eine „App“ auf diesem Desktop:
+
+- **Das Spiel** (der Shooter): Man startet es per Doppelklick und es läuft im Vollbild.
+- **Chat-App:** eine sichtbare Parodie eines Gamer-Chats. Sie hat Server, Kanäle und Direktnachrichten und sieht „gecrackt“ aus (falsche Badges, „Nitro Free Edition“-Gags). **Sie hat einen eigenen Namen, ein eigenes Logo und eigene Farben**, also weder den Namen noch das Logo des echten Produkts. Man soll die Anspielung erkennen, ohne dass es eine Kopie ist. Der Name ist noch offen (Vorschläge des Builders).
+- **Code-Editor-App:** Hier schreibt man die Cheat-Module (Abschnitt 5).
+- **Shop-App:** eine „Darknet“-Webseite im Fake-Browser, in der man Werkzeuge mit Credits kauft (Abschnitt 6).
+- **Extras für Humor:** ein Papierkorb voller „gepasteter“ Cheats, Fake-Popups („Dein PC hat 47 Viren. Gar nicht wahr.“) und ein Einstellungen-Fenster.
+
+**Story und Tutorial im Chat:**
+1. Kurz nach dem Boot meldet sich eine Mentor-Figur im Chat und lädt einen auf den CheatLab-Server ein.
+2. **Onboarding als Chat-Gespräch** mit Antwort-Buttons: „Schon mal einen Cheat benutzt?“, „Schon mal programmiert?“, „Kennst du C++?“. Die Antworten bestimmen, wie ausführlich die ersten Missionen erklären. Profis können die Grundlagen überspringen.
+3. **Lustiger Einstieg:** Eine zwielichtige Figur verkauft einem „UltraHax 9000 PREMIUM“. Man spielt ein Match damit: Regenbogen-ESP, alles trifft, man fühlt sich wie ein Gott. Dann erscheint ein riesiger **BANNED**-Screen („Grund: Paste erkannt. lol.“). Der Mentor lacht: „Gekaufte Cheats kennt jedes Anti-Cheat. Bau deinen eigenen.“ → Mission 1.
+4. Danach führt der Chat durch das Spiel. Figuren geben Missionen, Tipps, Spott und Lob, reagieren auf Erkennungen („bro, 180° Snap, ernsthaft?“) und kündigen neue Werkzeuge im Shop an.
+- Die Story ist klein und lustig, keine riesige Handlung. Alle Texte gibt es auf DE und EN.
+- **Später (Online-Phase):** Echte Kanäle für Spieler kommen dazu (Lobby-Chat, Code teilen), mit Moderation: Melden, Wortfilter, Blocken. Bis dahin schreiben nur NPCs.
+
 ## 9. Gameplay
 
 - **Movement:** Source-artig mit Bhop, Air-Strafing und Crouch-Jump.
@@ -115,9 +133,9 @@ Ziel: **Spaß + C++ lernen**, für komplette Anfänger.
 ## 11. Phasen
 
 0. **Spikes:** (a) Lässt sich ein C++-Teilmengen-Interpreter in s&box-C# schnell genug für `OnTick` mit 20+ Spielern bauen? (b) Bhop-Movement in s&box. (c) Standalone-Export testen und Freigabe bei Valve/Facepunch anfragen.
-1. **Kern:** Steam-Login + kleines Backend für den Fortschritt, eigene Modelle, Movement, 1v1-Aim-Map, Interpreter (Grundsprache), Editor, erste Werkzeuge (ESP, Aimbot, Bhop), Credits-Shop, AC-Stufen 1–2, erste Missionen.
+1. **Kern:** HaxOS-Desktop + Chat-App mit Intro-Story und Onboarding, Steam-Login + kleines Backend für den Fortschritt, eigene Modelle, Movement, 1v1-Aim-Map, Interpreter (Grundsprache), Editor, erste Werkzeuge (ESP, Aimbot, Bhop), Credits-Shop, AC-Stufen 1–2, erste Missionen.
 2. **Ausbau:** 5v5 gegen Bots, Zeiger und virtueller Speicher, AC-Stufen 3–5, mehr Missionen, DE/EN.
-3. **Online:** Server-Ausführung, Self-Hosting, Weltrangliste.
+3. **Online:** Server-Ausführung, echter Chat mit Moderation, Self-Hosting, Weltrangliste.
 4. **Battle Royale mit Bauen.**
 5. **Release** (s&box-Plattform und/oder Steam-Standalone, sonst Plan B).
 
@@ -125,7 +143,7 @@ Jede Phase bekommt einen eigenen Umsetzungsplan.
 
 ## 12. Entscheidungen des Nutzers
 
-Alles im Spiel, wie Pure Skill, aber Cheats selbst programmieren · C++ · s&box · Credits schalten Werkzeuge frei · 5 AC-Stufen im Spiel, 4/5 todesschwer · Erwischt bedeutet Punktabzug + Anzeige · eigener C++-Interpreter · Einzelspieler zuerst, Online später · Bhop/HvH · Modi: 5v5, BR mit Bauen, Missionen · Missionen mit Aufgaben · Anfänger von null · AC-Regeln nach Stufe freischalten · DE+EN · Steam, Preis später · Plan B: anderer Launcher oder GitHub-Release, Closed Source · Weltrangliste nur von offiziellen Servern · Closed Source hat Vorrang → Standalone · Skripte dürfen lesen, steuern und (spät, teuer, riskant) eigene Werte schreiben · Fortschritt auf dem Server des Nutzers, gilt überall · AC-Stufen freischalten, dann frei wählen · Team: Nutzer + Claude · Bots einstellbar · klein und simpel, eigene Maps später.
+Alles im Spiel, wie Pure Skill, aber Cheats selbst programmieren · C++ · s&box · Credits schalten Werkzeuge frei · 5 AC-Stufen im Spiel, 4/5 todesschwer · Erwischt bedeutet Punktabzug + Anzeige · eigener C++-Interpreter · Einzelspieler zuerst, Online später · Bhop/HvH · Modi: 5v5, BR mit Bauen, Missionen · Missionen mit Aufgaben · Anfänger von null · AC-Regeln nach Stufe freischalten · DE+EN · Steam, Preis später · Plan B: anderer Launcher oder GitHub-Release, Closed Source · Weltrangliste nur von offiziellen Servern · Closed Source hat Vorrang → Standalone · Skripte dürfen lesen, steuern und (spät, teuer, riskant) eigene Werte schreiben · Fortschritt auf dem Server des Nutzers, gilt überall · AC-Stufen freischalten, dann frei wählen · Start als Fake-Desktop (VM-Gefühl) mit Parodie-Chat-App, Mentor-Onboarding per Chat (Cheat-/Programmier-Erfahrung abfragen), kleine lustige Story mit „gekaufter Cheat → gebannt“-Einstieg · Chat: erst NPCs, später echte Spieler · Fake-OS mit eigenem Gag-Namen · Team: Nutzer + Claude · Bots einstellbar · klein und simpel, eigene Maps später.
 
 ## 13. Entscheidungen von Claude (korrigierbar)
 
@@ -134,6 +152,8 @@ Alles im Spiel, wie Pure Skill, aber Cheats selbst programmieren · C++ · s&box
 - Bequeme API vs. roher virtueller Speicher als Kernmechanik gegen das AC.
 - Inhalt der AC-Stufen im Detail (Abschnitt 7).
 - Online: Skripte laufen auf dem Server.
+- Name „HaxOS“, Shop als Darknet-Webseite, Code-Editor als Desktop-App, Ablauf der Intro-Story.
+- Chat-App: Parodie mit eigenem Namen und Logo, keine echten Marken.
 - Verdachtswert mit gestuften Folgen beim Erwischtwerden.
 - Bots auf höchster Stufe übermenschlich.
 - Steam-Login, Backend ab Phase 1, offline spielbar ohne Credits.
